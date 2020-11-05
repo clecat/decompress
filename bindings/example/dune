@@ -1,0 +1,4 @@
+(rule
+ (targets example)
+ (deps ../stubs/libdecompress.a example.c)
+ (action (run gcc -o %{targets} example.c -I../stubs -L../stubs/ -ldecompress -lm -ldl)))
